@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <table border="2">
+            <tr>
+                <th colspan="2">MyTable 1</th>
+            </tr>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+            <ui:repeat value="#{xATestBean.tables1}" var="temp">
+                <tr>
+                    <td><h:outputText value="#{temp.idTable1}"/></td>
+                    <td><h:outputText value="#{temp.name}"/></td>
+                </tr>
+            </ui:repeat>
+        </table>
+        <table  border="2" >
+            <tr>
+                <th colspan="2">MyTable 2</th>
+            </tr>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+            <ui:repeat value="#{xATestBean.tables2}" var="temp">
+                <tr>
+                    <td><h:outputText value="#{temp.idTable2}"/></td>
+                    <td><h:outputText value="#{temp.name}"/></td>
+                </tr>
+            </ui:repeat>
+        </table>
+        <h:form>
+        <h:commandButton action="create.xhtml" value="Create"/>
+        </h:form>
+    </h:body>
+</html>
+
